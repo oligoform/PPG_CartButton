@@ -40,11 +40,23 @@ $aModule          = array(
             'template' => 'article_extend.tpl',
             'block'    => 'admin_article_extend_form',
             'file'     => '/views/blocks/admin_ppgcb_article_form.tpl'
-        ),
+             ),
         array(
             'template'    => 'usergroup_main.tpl', 
             'block'       => 'admin_usergroup_main_form', 
             'file'        => '/views/blocks/vtec_admin_benutzerID.tpl'
              ),
+        array('template'  => 'page/details/inc/productmain.tpl',
+              'block'     => 'details_productmain_zoom',
+              'file'      => 'views/blocks/ppg_lieferinfo.tpl'
+              ),
+        array('template'  => 'widget/product/listitem_infogrid.tpl',
+              'block'     => 'widget_product_listitem_infogrid_gridpicture',
+              'file'      => 'views/blocks/ppg_lieferinfo_infogrid.tpl'
+              ),
+        array('template'  => 'widget/product/listitem_grid.tpl',
+              'block'     => 'widget_product_listitem_grid_price_value',
+              'file'      => 'views/blocks/ppg_lieferinfo_grid.tpl'
+              ),
     ),
 );

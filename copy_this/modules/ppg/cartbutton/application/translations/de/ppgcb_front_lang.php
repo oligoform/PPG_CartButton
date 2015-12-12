@@ -17,7 +17,8 @@
 
 $sLangName = 'Deutsch';
 $aLang     = array(
-    'charset'                    => 'UTF-8',
-    'PPG_SHOWKART_PRODUKT_NICHT_KAUFBAR'  => 'Nur kaufbar im Liefergebiet',
+    'charset'                                 => 'UTF-8',
+    'PPG_SHOWKART_PRODUKT_NICHT_KAUFBAR'      => 'Nur kaufbar wenn angemeldet und im Liefergebiet!',
+    'PPG_SHOWKART_PRODUKT_NICHT_KAUFBAR_INFO' => 'Nur im Liefergebiet!',
     
 );

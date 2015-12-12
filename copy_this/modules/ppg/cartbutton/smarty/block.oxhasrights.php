@@ -36,7 +36,7 @@
  */
 function smarty_block_oxhasrights( $params, $content, &$smarty, &$repeat )
 {
-   
+    
     $sIdent  = isset( $params['ident'] )?$params['ident']:null;
            
        $sModulGruppe = oxRegistry::getConfig()->getConfigParam('showcartid');
@@ -69,8 +69,29 @@ function smarty_block_oxhasrights( $params, $content, &$smarty, &$repeat )
            
            return false;
        }
+       else {
+           return $content;
+       }
     }
-    return $content;   
+    
+    /* Eigener oxhasright Ident zum Anzeigen der "Nur im Liefergebiet" Meldung */
+    
+    if (isset($sIdent) && ($sIdent == "PPGKEINVERSAND" )) {
+        
+              
+       $actProduct = $smarty->_tpl_vars['oView']->getProduct();
+       
+       if ($actProduct->oxarticles__ppghiden->value && $ppgInSpezGruppe == true) {  
+                        
+           return false;
+       }
+       elseif ($actProduct->oxarticles__ppghiden->value) {
+           
+           return $content;
+       }
+    }
+    
+    
     
     
 }     
